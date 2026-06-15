@@ -1,0 +1,39 @@
+
+.container{
+    
+    width:100%;
+    padding:10% 0 0 30%;
+}
+.contact_form p{
+    font-size: 20px;
+    
+}
+.contact_form input{
+    width:80%;
+    
+}
+.submit_button{
+    width:60%;
+    margin-left:50px;
+    border-radius:8px;
+    background-color: #005a5b; 
+}
+.contact_form input{
+    background-color:rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    border-style:solid;
+    
+    color:rgb(0, 0, 0);
+    
+
+}
+.message{
+    background-color:rgba(255, 255, 255, 0.2);
+    
+    color:rgb(0, 0, 0);
+}
+input::placeholder,
+textarea::placeholder {
+    color: black; /* Change this hex code to your desired color */
+    opacity: 1;     /* Required for Firefox to display the exact color */
+}
