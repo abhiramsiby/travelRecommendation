@@ -66,6 +66,25 @@ function display_destinations() {
                 });
 
             }
+            else if(searchString=='country'||searchString=='countries'){
+                 data.countries.forEach(country => {
+                
+                    // 3. Just loop and append here safely!
+                    country.cities.forEach(city => {
+                        let container = document.createElement('div');
+                        container.classList.add('card'); // Class name for grid responsive layout
+                        container.innerHTML = `
+                            <img src="${city.imageUrl}">
+                            <h3>${city.name}</h3>
+                            <p>${city.description}</p>
+                        `;
+                        
+                        page.appendChild(container);
+                    });
+                });
+            
+
+            }
             
         })
 
