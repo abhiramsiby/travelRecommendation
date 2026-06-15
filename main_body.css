@@ -30,12 +30,12 @@ body{
     padding:10px 20px 10px 20px;
     
 }
-.title{
+.main_body h1{
     
     width:350px;
     margin-top:120px;
 }
-.description{
+.main_body p{
     width:500px;
    font-size:25px;
   line-height: 1.6;
@@ -49,7 +49,7 @@ body{
 .twitter,.facebook,.instagram,.youtube{
     width:40px;
 }
-.book_button{
+.main_body button{
     background-color: #005a5b; 
   color: white;
   border: none;
@@ -63,5 +63,56 @@ body{
     margin:0;
     padding:0;
 }
+/* 1. The Container - Set to a stack of rows */
+#recommendations {
+    display: flex;
+    flex-direction: column;   /* 🌟 Stacks the items vertically, creating distinct rows */
+    gap: 25px;                /* Healthy spacing between the rows */
+    padding: 20px;
+    
+    width: 100%;              /* Stays completely inside your parent container bounds */
+    max-width: 700px;         /* Keeps the layout crisp and centered inside your background */
+    margin: 0 auto;           /* Centers the entire stack horizontally */
+    box-sizing: border-box;
+}
 
+/* 2. The Card - Keeps your design but behaves as a singular row layout */
+.card {
+    background-color: #8f8a8a58;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
 
+    display: flex;
+    flex-direction: column;   /* Keeps content moving cleanly from top to bottom */
+    
+    width: 100%;              /* Takes up the maximum available space in its row */
+    height: auto;             /* Automatically stretches down if text length increases */
+    box-sizing: border-box;
+}
+
+/* 3. The Image Sizing */
+.card img {
+    width: 100%;
+    height: 150px;            /* Uniform height across both rows */
+    object-fit: fit;        /* Ensures the landmark photos don't look warped */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 4. Text Typography Adjustments */
+.card h3 {
+    margin: 8px 0;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #000000;
+    line-height: 1.5;
+    margin: 0;
+    word-wrap: break-word;    /* Safe backup to keep letters inside the box */
+}
