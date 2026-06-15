@@ -1,6 +1,103 @@
-.team_details{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    color:#ffffff; 
-  
+/* Container holding everything */
+.static-about-page {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* --- ABOUT US SECTION --- */
+.static-about-text {
+    margin-bottom: 60px;
+}
+
+.static-about-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.static-about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+
+/* --- OUR TEAM SECTION --- */
+/* Forces a strict left/right row */
+.static-team-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligns everything to the top */
+    width: 100%;
+}
+
+/* Locks the title to the left side */
+.team-title-box {
+    width: 150px; /* Fixed width so it never shrinks or grows */
+    flex-shrink: 0;
+}
+
+.team-title-box h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Holds the 3 members on the right */
+.team-members-box {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    
+}
+
+/* Individual member styling */
+.member-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Forces them into equal thirds */
+    padding: 0 10px;
+    gap:0;
+}
+
+.white-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.white-circle svg {
+    width: 35px;
+    height: 35px;
+    fill: #333;
+}
+
+.member-profile h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+}
+
+.member-profile p {
+    width:80px;
+    font-size: 10px; /* Ensures the blue badges align perfectly horizontally */
+}
+
+.blue-badge {
+    background-color: #1a4a6b;
+    color: #ffffff;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom:60px;
+     /* Pushes the badge to the absolute bottom of its container */
 }

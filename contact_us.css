@@ -1,39 +1,65 @@
 
 .container{
+    display:flex;
     
-    width:100%;
-    padding:10% 0 0 30%;
-}
-.contact_form p{
-    font-size: 20px;
+   width:83%;
     
 }
-.contact_form input{
-    width:80%;
+.contact_heading{
+    border-radius:10px;
     
+    width:40%;
 }
+
+.contact_form{
+    
+    width:58%;
+}
+
 .submit_button{
-    width:60%;
-    margin-left:50px;
-    border-radius:8px;
+    
+    border-style: inset;
     background-color: #005a5b; 
+    border-color:black;
 }
 .contact_form input{
     background-color:rgba(255, 255, 255, 0.2);
     box-shadow: none;
     border-style:solid;
-    
+    font-family:bold;
     color:rgb(0, 0, 0);
     
 
 }
 .message{
     background-color:rgba(255, 255, 255, 0.2);
-    
+    font-family:bold;
     color:rgb(0, 0, 0);
 }
 input::placeholder,
 textarea::placeholder {
     color: black; /* Change this hex code to your desired color */
     opacity: 1;     /* Required for Firefox to display the exact color */
+}
+@media (min-width:501px) and (max-width:999px) {
+        .container {
+          grid-template-columns: .5fr .5fr;
+        }
+      }
+
+ @media (min-width:1000px) {
+        .container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+@media(max-width:500px){
+    .container{
+        grid-template-columns: .25fr .25fr;
+    }
+}
+.submit_button:active{
+    border-style:outset;
+    
+
 }
